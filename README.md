@@ -1,2 +1,5 @@
-# fabric-learing-demo
-深入学习fabric.js学习测试用例
+node版本 v20.11.1
+安装依赖
+npm install
+启动项目
+npm run dev

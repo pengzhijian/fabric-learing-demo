@@ -1,0 +1,29 @@
+{
+  "name": "vue3_test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "element-plus": "^2.3.8",
+    "fabric": "^5.3.0",
+    "file-saver": "^2.0.5",
+    "pinia": "^2.0.28",
+    "vue": "^3.2.45",
+    "vue-fit-next": "^0.3.7",
+    "vue-json-editor": "^1.4.3",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "mockjs": "^1.1.0",
+    "sass": "^1.56.2",
+    "sass-loader": "^10.1.1",
+    "vite": "^4.0.0",
+    "vite-plugin-mock": "^3.0.2"
+  }
+}

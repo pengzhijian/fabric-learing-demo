@@ -7,24 +7,34 @@ onMounted(() => {
   if (!canvas) {
     canvas = new fabric.Canvas('canvas');
   }
-  // 创建一个矩形
-  let rect = new fabric.Rect({
-    left: 50,
-    top: 50,
-    fill: 'red',
-    width: 100,
-    height: 100,
-    angle: 45
+  const circle = new fabric.Circle({
+    radius: 100,
+    fill: '#eef',
+    scaleY: 0.5,
+    originX: 'center',
+    originY: 'center'
+  });
+
+  const text = new fabric.Text('hello world', {
+    fontSize: 30,
+    originX: 'center',
+    originY: 'center'
+  });
+
+  const group = new fabric.Group([circle, text], {
+    left: 150,
+    top: 100,
+    angle: -10
   });
 
   // 将所有图形添加到 canvas 中
-  canvas.add(rect);
-  console.log('渲染完毕')
+  canvas.add(group);
+  console.log('渲染完毕', group)
 })
 
 onBeforeUnmount(() => {
   console.log('卸载完毕')
-  canvas.getObjects().forEach(function(obj) {
+  canvas.getObjects().forEach(function (obj) {
     canvas.remove(obj);
   });
 
@@ -57,9 +67,9 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss">
-  #canvas {
-    border: 1px solid greenyellow;
-  }
+#canvas {
+  border: 1px solid greenyellow;
+}
 </style>
 <style lang="scss" scoped>
 .main {

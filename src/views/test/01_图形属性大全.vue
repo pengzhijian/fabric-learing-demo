@@ -148,18 +148,18 @@ onBeforeUnmount(() => {
 
   // 3. 移除事件监听器（如有必要）
   canvas.off();
-  // 4. 从 DOM 中移除 Canvas 元素（如果需要）
-  const canvasElement = document.querySelector('.canvas-container');
-  const parentNode = canvasElement.parentNode;
-  const lastNode = document.createElement('canvas');
-  lastNode.id = 'canvas';
-  lastNode.width = 500;
-  lastNode.height = 600;
-  if (canvasElement) {
-    parentNode.removeChild(canvasElement);
-    // console.log(parentNode)
-    parentNode.appendChild(lastNode);
-  }
+  // // 4. 从 DOM 中移除 Canvas 元素（如果需要）
+  // const canvasElement = document.querySelector('.canvas-container');
+  // const parentNode = canvasElement.parentNode;
+  // const lastNode = document.createElement('canvas');
+  // lastNode.id = 'canvas';
+  // lastNode.width = 500;
+  // lastNode.height = 600;
+  // if (canvasElement) {
+  //   parentNode.removeChild(canvasElement);
+  //   // console.log(parentNode)
+  //   parentNode.appendChild(lastNode);
+  // }
 
   canvas = null;
 })

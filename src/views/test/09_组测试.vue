@@ -27,8 +27,21 @@ onMounted(() => {
     angle: -10
   });
 
+  const clipPath = new fabric.Circle({
+    radius: 100,
+    top: -100,
+    left: -100
+  });
+  const group2 = new fabric.Group([
+    new fabric.Rect({ width: 100, height: 100, fill: 'red' }),
+    new fabric.Rect({ width: 100, height: 100, fill: 'yellow', left: 100 }),
+    new fabric.Rect({ width: 100, height: 100, fill: 'blue', top: 100 }),
+    new fabric.Rect({ width: 100, height: 100, fill: 'green', left: 100, top: 100 })
+  ]);
+  group2.clipPath = clipPath;
+
   // 将所有图形添加到 canvas 中
-  canvas.add(group);
+  canvas.add(group, group2);
   console.log('渲染完毕', group)
 })
 
